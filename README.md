@@ -5,3 +5,5 @@
 <p>&nbsp;</p>
 <p><span style="text-decoration: underline;"><span style="font-weight: 400;"><strong>PART 2: Azure DevOps Pipeline</strong></span></span></p>
 <p><span style="font-weight: 400;">This part demonstrates the capabilities within Azure DevOps (ADO) pipelines. Essentially, we are importing our repo from part 1 into ADO and creating a CI pipeline with terraform commands. We then release what we build in a CD pipeline and the end result will be the same as part 1: a remote backend and our 5 Azure resources created. The pipeline will also destroy our infrastructure once approved.</span></p>
+
+<p><em><strong>Project currently on pause as of 1/19/2025 due to Microsoft issue with Azure DevOps account. Pending resolution action from Microsoft.</strong></em></p>
