@@ -4,6 +4,6 @@
 <p><span style="font-weight: 400;">Note: We created a remote backend using Azure storage to migrate from local state to remote.</span></p>
 <p>&nbsp;</p>
 <p><span style="text-decoration: underline;"><span style="font-weight: 400;"><strong>PART 2: Azure DevOps Pipeline</strong></span></span></p>
-<p><span style="font-weight: 400;">This part demonstrates the capabilities within Azure DevOps (ADO) pipelines. Essentially, we are importing our repo from part 1 into ADO and creating a CI pipeline with terraform commands. We then release what we build in a CD pipeline and the end result will be the same as part 1: a remote backend and our 5 Azure resources created. The pipeline will also destroy our infrastructure once approved.</span></p>
-
-<p><em><strong>Project currently on pause as of 1/19/2025 due to Microsoft issue with Azure DevOps account. Pending resolution action from Microsoft.</strong></em></p>
+<p><span style="font-weight: 400;">This part demonstrates the capabilities within Azure DevOps (ADO) pipelines. Essentially, we are importing our repo from part 1 into ADO and creating a CI pipeline with terraform commands: init, validate, fmt, plan. Additionally, we integrate Archive files and PublishBuildArtifacts tasks. </span></p>
+<p><span style="font-weight: 400;">We then build a release CD pipeline that includes the tasks: extract files, install terraform latest, terraform init, and terraform apply. Our 5 resources will be created as demonstrated in part 1. </span></p>
+<p><span style="font-weight: 400;">Additionally, we clone the deployment, rename it as "Destroy", and update the terraform apply command to terraform destroy. We trigger this for pre-approval and once approved our infrastructure is wiped clean.&nbsp;</span></p>
